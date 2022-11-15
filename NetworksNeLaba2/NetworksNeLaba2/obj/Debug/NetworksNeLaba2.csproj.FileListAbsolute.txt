@@ -1,0 +1,7 @@
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\bin\Debug\NetworksNeLaba2.exe
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\bin\Debug\NetworksNeLaba2.pdb
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\obj\Debug\NetworksNeLaba2.csproj.AssemblyReference.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\obj\Debug\NetworksNeLaba2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\obj\Debug\NetworksNeLaba2.csproj.CoreCompileInputs.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\obj\Debug\NetworksNeLaba2.exe
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\NetworksNeLaba2\obj\Debug\NetworksNeLaba2.pdb

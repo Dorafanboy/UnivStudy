@@ -1,0 +1,14 @@
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\bin\Debug\InputForm.exe.config
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\bin\Debug\InputForm.exe
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\bin\Debug\InputForm.pdb
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.csproj.AssemblyReference.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.Properties.Resources.resources
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.csproj.GenerateResource.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.csproj.CoreCompileInputs.cache
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.exe
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.pdb
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\bin\Debug\NetworksNeLaba2.exe
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\bin\Debug\NetworksNeLaba2.pdb
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.Form1.resources
+C:\Users\Roman\RiderProjects\NetworksNeLaba2\InputForm\obj\Debug\InputForm.csproj.CopyComplete
