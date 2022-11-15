@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text=center">
+    <h1 class="display-4">Чат</h1>
+</div>
+
+<div class="container">
+    <style>
+   .b1 {
+    background: #30d5c8;  
+    color: white; 
+    font-size: 35pt;
+   }
+  </style>
+    <div id="userinfo" class="row">
+        <label for="username">Введите имя</label>
+        <input type="text" class="form-control" id="username" name="username" autocomplete="off" />
+        <button type="button" class="btn btn-block" onclick="SetUsername();">Присоединиться</button>
+    </div>
+
+    <div id="messagearea" class="row" style="display:none">
+        <div>Присоединились: <b><span id="username1">Not set</span></b></div>
+        <hr />
+        <div class="row">
+            <div class="col-6">
+                <div class="flex-column" id="messagesList"></div>
+            </div>
+        </div>
+        <hr />
+        <input type="text" id="message" autocomplete="off" size = "300"/>
+        <input type="button" class = "b1" id="sendButton" value="Send Message" size="100" siz />
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script>
+let counter = 0;
+    "use strict";
+    var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+    var username = "";
+    var input = document.getElementById("message");
+
+    document.getElementById("sendButton").disabled = true;
+
+    connection.on("ReceiveMessage", function(user, message) {
+        counter++
+        var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var time = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false});
+        var encodedMsg = '<' + counter + '>' + ' ' + time +  ' ' + user + ' написал: ' + msg;
+        var p = document.createElement("p");
+        p.textContent = encodedMsg;
+        document.getElementById("messagesList").appendChild(p);
+    });
+    
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("sendButton").click();
+  }
+});
+
+    connection.start().then(function() {
+        document.getElementById("sendButton").disabled = false;
+    }).catch(function(err) {
+        return console.error(err.toString());
+    });
+
+    document.getElementById("sendButton").addEventListener("click", function(event) {
+        var message = document.getElementById("message").value;
+        connection.invoke("SendMessage", username, message).then(function() {
+            document.getElementById("message").value = "";
+        }).catch(function(err) {
+            return console.error(err.toString());
+        });
+    event.preventDefault();
+    });
+
+    function SetUsername() {
+        var usernameinput = document.getElementById("username").value;
+        if (usernameinput === "") {
+            alert("Введите имя:");
+            return;
+        }
+        username = usernameinput;
+
+        document.getElementById("userinfo").style.display = 'none';
+        document.getElementById("messagearea").style.display = 'block';
+        document.getElementById("username1").innerText = usernameinput;
+    }
+</script>
